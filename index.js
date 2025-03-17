@@ -1,23 +1,21 @@
 const { addonBuilder, serveHTTP } = require("stremio-addon-sdk");
-const data = require("./res.json");
+const data = require("./data.json");
 console.log(data);
 
 const addon = new addonBuilder({
   id: "org.stremio.youtubemovie",
   name: "Youtube Movie",
-  version: "0.0.1",
+  version: "1.0.0",
   description: "Watch Youtube Movies available on youtube",
   resources: ["catalog", "stream"],
   types: ["movie"],
   catalogs: [
     {
-      id: "youtubeMovies",
-      name: "Youtube Movies",
       type: "movie",
-      extra: [{ name: "search" }],
+      id: "helloworldmovies",
     },
   ],
-  idPrefixes: ["tt-"],
+  idPrefixes: ["tt"],
 });
 
 const METAHUB_URL = "https://images.metahub.space";
@@ -44,29 +42,11 @@ addon.defineCatalogHandler(function (args, cb) {
   return Promise.resolve({ metas: metas });
 });
 
-addon.defineStreamHandler((args) => {
-  // serve one stream for big buck bunny
-  return Promise((resolve, reject) => {
-    try {
-      async () => {
-        const streams = { streams: [] };
-        streams["streams"].push({
-          ytId: "m3BKVSpP80s",
-        });
-        resolve(streams);
-      };
-    } catch (error) {
-      reject(error);
-    }
-  });
+addon.defineStreamHandler(function (args) {
   if (data[args.id]) {
-    return Promise.resolve({ stream: [data[args.id]] });
+    return Promise.resolve({ streams: [data[args.id]] });
   } else {
-    const stream = {
-      ytId: "m3BKVSpP80s",
-    };
-    return Promise.resolve({ streams: [stream] });
+    return Promise.resolve({ streams: [] });
   }
 });
-
-serveHTTP(addon.getInterface(), { port: 7000 });
+serveHTTP(addon.getInterface(), { port: 7001 });

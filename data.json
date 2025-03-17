@@ -4,35 +4,24 @@
     "ytId": "6M191qGTZA4",
     "type": "movie"
   },
-  "tt1806913": {
-    "name": "Golmaal Again",
-    "url": "https://www.youtube.com/watch?v=J7vzDh2A9nk&pp=ygUPYm9sbHl3b29kIG1vdmll",
-    "type": "movie"
-  },
-  "tt3848892": {
-    "name": "Baby",
-    "url": "https://www.youtube.com/watch?v=ZrkcXuVlf4U",
-    "type": "movie"
-  },
-  "tt0051744": {
-    "name": "House on Haunted Hill",
-    "type": "movie",
-    "infoHash": "9f86563ce2ed86bbfedd5d3e9f4e55aedd660960"
-  },
-  "tt1254207": {
-    "name": "Big Buck Bunny",
-    "type": "movie",
-    "url": "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
-  },
   "tt0031051": {
-    "name": "The Arizone Kid",
+    "name": "The Arizona Kid",
     "type": "movie",
-    "ytId": "m3BKVSpP80s",
-    "url": "https://www.youtube.com/watch?v=m3BKVSpP80s"
+    "ytId": "m3BKVSpP80s"
   },
-  "tt0137523": {
-    "name": "Fight Club",
+  "tt0995031": {
+    "name": "Bhool Bhulaiyaa",
     "type": "movie",
-    "externalUrl": "https://www.netflix.com/watch/26004769"
+    "ytId": "jzYxbnHHhY4"
+  },
+  "tt5542802": {
+    "name": "Raabta",
+    "type": "movie",
+    "ytId": "Iy-6jmQCcrI"
+  },
+  "tt0119427": {
+    "name": "Judaai",
+    "type": "movie",
+    "ytId": "xQQG3Nhwh8Y"
   }
 }
