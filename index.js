@@ -1,18 +1,25 @@
 const { addonBuilder, serveHTTP } = require("stremio-addon-sdk");
-const data = require("./data.json");
+const movies = require("./data.json");
+const series = require("./series.json");
+
+const data = { ...movies, ...series };
 console.log(data);
 
 const addon = new addonBuilder({
   id: "org.stremio.youtubemovie",
-  name: "Youtube Movie",
+  name: "Youtube Media",
   version: "1.0.0",
-  description: "Watch Youtube Movies available on youtube",
+  description: "Watch Youtube Media available on youtube",
   resources: ["catalog", "stream"],
-  types: ["movie"],
+  types: ["movie", "series"],
   catalogs: [
     {
       type: "movie",
       id: "helloworldmovies",
+    },
+    {
+      type: "series",
+      id: "helloworldseries",
     },
   ],
   idPrefixes: ["tt"],
