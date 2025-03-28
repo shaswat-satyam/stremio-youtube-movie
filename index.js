@@ -3,7 +3,6 @@ const movies = require("./data.json");
 const series = require("./series.json");
 
 const data = { ...movies, ...series };
-console.log(data);
 
 const addon = new addonBuilder({
   id: "org.stremio.youtubemovie",
